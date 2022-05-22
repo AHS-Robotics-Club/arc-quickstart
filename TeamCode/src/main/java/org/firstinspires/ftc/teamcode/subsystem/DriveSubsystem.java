@@ -12,18 +12,15 @@ public class DriveSubsystem extends SubsystemBase {
     private final Motor frontLeft;
     private final Motor backLeft;
     private final Motor backRight;
-    private final RevIMU revIMU;
 
     public DriveSubsystem(Motor fL, Motor fR, Motor bL, Motor bR, RevIMU imu) {
         frontLeft = fL;
         backLeft = bL;
         backRight = bR;
 
-        revIMU = imu;
-
         mecanumDrive = new MecanumDrive(frontLeft, fR, backLeft, backRight);
     }
     public void drive(double strafeSpeed, double forwardSpeed, double turnSpeed) {
-        mecanumDrive.driveFieldCentric(-strafeSpeed, -forwardSpeed, -turnSpeed, revIMU.getHeading(), false);
+        mecanumDrive.driveRobotCentric(strafeSpeed, forwardSpeed, turnSpeed);
     }
 }
