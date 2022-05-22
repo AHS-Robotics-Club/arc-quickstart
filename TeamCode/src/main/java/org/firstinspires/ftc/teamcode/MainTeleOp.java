@@ -35,7 +35,7 @@ public class MainTeleOp extends CommandOpMode {
 
         gPad1 = new GamepadEx(gamepad1);
 
-        driveS = new DriveSubsystem(frontLeft, frontRight, backLeft, backRight, revIMU);
+        driveS = new DriveSubsystem(frontLeft, frontRight, backLeft, backRight);
         drive_Com = new DriveCommand(driveS, gPad1::getLeftX, gPad1::getLeftY, gPad1::getRightX);
 
 
