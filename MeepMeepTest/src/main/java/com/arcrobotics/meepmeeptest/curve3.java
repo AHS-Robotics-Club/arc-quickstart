@@ -14,9 +14,10 @@ public class curve3 {
                 // Set bot constraints: maxVel, maxAccel, maxAngVel, maxAngAccel, track width
                 .setConstraints(60, 60, Math.toRadians(180), Math.toRadians(180), 15)
                 .followTrajectorySequence(drive ->
-                        drive.trajectorySequenceBuilder(new Pose2d(-10, -30, Math.toRadians(45)))
-                                .splineTo(new Vector2d(30, 30), Math.toRadians(180))
-                                .splineTo(new Vector2d(-50, 30), Math.toRadians(180))
+                        drive.trajectorySequenceBuilder(new Pose2d(0, -25, Math.toRadians(35)))
+                                .splineTo(new Vector2d(30, 27), Math.toRadians(140))
+                                .splineTo(new Vector2d(20, 30), Math.toRadians(180))
+                                .forward(70)
                                 .build()
                 );
 

@@ -15,7 +15,9 @@ public class curve1 {
                 .setConstraints(60, 60, Math.toRadians(180), Math.toRadians(180), 15)
                 .followTrajectorySequence(drive ->
                         drive.trajectorySequenceBuilder(new Pose2d(40, -40, Math.toRadians(90)))
-                                .splineTo(new Vector2d(-40, 40), Math.toRadians(90))
+                                .splineTo(new Vector2d(-8, 5), Math.toRadians(180))
+                                .forward(10)
+                                .splineTo(new Vector2d(-60, 40), Math.toRadians(90))
                                 .build()
                 );
 

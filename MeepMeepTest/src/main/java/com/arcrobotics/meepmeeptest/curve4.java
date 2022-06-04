@@ -15,12 +15,14 @@ public class curve4 {
                 .setConstraints(60, 60, Math.toRadians(180), Math.toRadians(180), 15)
                 .followTrajectorySequence(drive ->
                         drive.trajectorySequenceBuilder(new Pose2d(-5, -70, Math.toRadians(90)))
-                                .splineTo(new Vector2d(5, -5), Math.toRadians(-20))
+                                .splineTo(new Vector2d(5, -5), Math.toRadians(-30))
                                 .splineTo(new Vector2d(30, -10), Math.toRadians(0))
-                                .splineTo(new Vector2d(40, 10), Math.toRadians(180))
-                                .splineTo(new Vector2d(-20, 10), Math.toRadians(180))
-                                .splineTo(new Vector2d(-25, 30), Math.toRadians(0))
-                                .splineTo(new Vector2d(25, 30), Math.toRadians(0))
+                                .splineTo(new Vector2d(40, 7), Math.toRadians(140))
+                                .splineTo(new Vector2d(20, 10), Math.toRadians(180))
+                                .splineTo(new Vector2d(-20, 7), Math.toRadians(180))
+                                .splineTo(new Vector2d(-35, 20), Math.toRadians(90))
+                                .splineTo(new Vector2d(-20, 30), Math.toRadians(0))
+                                .forward(45)
                                 .build()
                 );
 

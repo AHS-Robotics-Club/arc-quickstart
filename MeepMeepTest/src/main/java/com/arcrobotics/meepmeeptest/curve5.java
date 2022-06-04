@@ -15,10 +15,10 @@ public class curve5 {
                 .setConstraints(60, 60, Math.toRadians(180), Math.toRadians(180), 15)
                 .followTrajectorySequence(drive ->
                         drive.trajectorySequenceBuilder(new Pose2d(-60, 30, Math.toRadians(-30)))
-                                .splineTo(new Vector2d(10, -15), Math.toRadians(-40))
-                                .splineTo(new Vector2d(5, -30), Math.toRadians(-150))
+                                .splineTo(new Vector2d(10, -20), Math.toRadians(-60))
+                                .splineTo(new Vector2d(0, -32), Math.toRadians(-150))
                                 .splineTo(new Vector2d(-5, -30), Math.toRadians(140))
-                                .splineTo(new Vector2d(-5, -6), Math.toRadians(30))
+                                .splineTo(new Vector2d(-2, -10), Math.toRadians(30))
                                 .splineTo(new Vector2d(60, 30), Math.toRadians(30))
                                 .build()
                 );
